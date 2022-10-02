@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+            <script src="https://npmcdn.com/flatpickr/dist/l10n/de.js"></script>
+            <script src="https://npmcdn.com/flatpickr/dist/l10n/fr.js"></script>
+            <script src="https://npmcdn.com/flatpickr/dist/l10n/it.js"></script>
+            <script src="js/rm.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+            <script src="l10n/de.js"></script>
+            <script src="l10n/fr.js"></script>
+            <script src="l10n/it.js"></script>
+            <script src="l10n/rm.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <h1></h1>
+        <div class="lang">
+            <button id="lang"></button>
+            <div class="choices">
+                <button id="de"></button>
+                <button id="fr"></button>
+                <button id="it"></button>
+                <button id="rm"></button>
+            </div>
+        </div>
+        <div class="container start">
+            <h2 id="srcTitle"></h2>
+            <div id="dropzone" class="disabled"></div><br />
+            <button id="submit"></button>
+        </div>
+        <div class="container results">
+            <h2 id="srcAddr"></h2>
+            <div id="results"></div>
+        </div>
+        <div class="container destinations">
+            <h2 id="destTitle"></h2>
+            <div id="destinations"></div>
+        </div>
+        <div class="container addDest">
+            <h2 id="addDestTitle"></h2>
+            <div class="form" id="addDestination">
+                <label for="destAddrInput" id="destAddrInputLabel"></label>
+                <input type="text" id="destAddrInput" />
+                <label for="destDateInput" id="destDateInputLabel"></label>
+                <input type="date" id="destDateInput" lang="de-ch" />
+                <label for="destTimeInput" id="destTimeInputLabel"></label>
+                <input type="time" id="destTimeInput" lang="de-ch" />
+                <button id="addDest"></button>
+            </div>
+        </div>
+    </body>
+</html>
