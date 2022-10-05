@@ -116,6 +116,9 @@ h1 {
     background-color: lightcoral;
     border: 1px solid red;
 }
+.inputError {
+    background-color: orange;
+}
 .form button {
     grid-column: span 2;
 }
