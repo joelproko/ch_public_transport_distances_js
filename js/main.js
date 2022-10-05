@@ -178,12 +178,35 @@ const checkDest = function() {
     if (addr.toLowerCase()!=="bern") {
         $.getJSON("https://timetable.search.ch/api/route.json?from=Bern&to="+addr+"&date="+date+"&time="+time+"&time_type=arrival",function(result) {
             if(result.messages!==undefined) {
-                if (result.messages=="No timetable information for this period.") {
+                if (typeof result.messages == "String") {
+                    if (result.messages=="No timetable information for this period.") {
+                        $("#destDateInput").addClass("inputError");
+                        return;
+                    }
+                    if(result.messages.substring(0,5)=="Stop ")
+                    {
+                        $("#destAddrInput").addClass("inputError");
+                        return;
+                    }
+                    $("#destAddrInput").addClass("inputError");
                     $("#destDateInput").addClass("inputError");
                     return;
                 }
-                $("#destAddrInput").addClass("inputError");
-                return;
+                else {
+                    for (var i=0;i<result.messages.length;i++) {
+                        if (result.messages[i]=="No timetable information for this period.") {
+                            $("#destDateInput").addClass("inputError");
+                        }
+                        else if (result.messages[i].substring(0,5)=="Stop ") {
+                            $("#destAddrInput").addClass("inputError");
+                        }
+                        else {
+                            $("#destAddrInput").addClass("inputError");
+                            $("#destDateInput").addClass("inputError");
+                        }
+                    }
+                    return;
+                }
             }
             addDest(addr,date,time);
         });
