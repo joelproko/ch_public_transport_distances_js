@@ -11,12 +11,16 @@ Funktioniert mit der API von fahrplan.search.ch, beschrieben unter https://timet
 
 ---
 
-# "Installation"
+# Anwendung (Mobile / nicht serverless)
+
+Auf https://joelproko.github.io/ch_public_transport_distances_js gehen.
+
+# "Installation" (PC)
 
 1. Projekt herunterladen
 2. Projekt entpacken (falls als Archiv heruntergeladen)
 
-# Anwendung
+# Anwendung (PC)
 
 <ol><li>index.html im entpackten Ordner mit Browser* öffnen</li>
 <li>Wichtige Zieldestinationen eingeben; braucht jeweils<dl>
