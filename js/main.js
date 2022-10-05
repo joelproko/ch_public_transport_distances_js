@@ -201,6 +201,7 @@ const checkDest = function() {
                             $("#destAddrInput").addClass("inputError");
                         }
                         else {
+                            $("#destAddrInput").val(result.messages[i]);
                             $("#destAddrInput").addClass("inputError");
                             $("#destDateInput").addClass("inputError");
                         }
